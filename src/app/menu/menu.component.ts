@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish } from '../shared/dish';
+import { DishdetailComponent } from '../dishdetail/dishdetail.component';
 
 // here the array is called dishes and has loaded the
 // class Dish with some js objects that will be retrieved then

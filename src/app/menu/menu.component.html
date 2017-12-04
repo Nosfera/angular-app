@@ -1,6 +1,4 @@
 <!-- this use fx or flex layout -->
-
-
 <div class="container"
      fxLayout="column"
      fxLayoutGap="10px">
@@ -23,13 +21,18 @@
     </md-grid-list>
   </div>
   <div fxFlex *ngIf="selectedDish">
+    <app-dishdetail></app-dishdetail>
+    <!-- Creation of a Card -->
     <md-card>
+      <!-- has header -->
       <md-card-header>
         <md-card-title>
           <h3>{{selectedDish.name | uppercase}}</h3>
         </md-card-title>
       </md-card-header>
+      <!-- Background image alone -->
       <img md-card-image src={{selectedDish.image}} alt={{selectedDish.name}}>
+      <!-- Content -->
       <md-card-content>
         <p>{{selectedDish.description}}
         </p>
