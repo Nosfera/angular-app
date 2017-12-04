@@ -6,8 +6,10 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { AppComponent } from './app.component';
 import 'hammerjs';
+
+import { AppComponent } from './app.component';
+import { MenuComponent } from './menu/menu.component';
 
 // Ng decorator linked to the appModule class
 /*
@@ -17,7 +19,8 @@ import 'hammerjs';
 */
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

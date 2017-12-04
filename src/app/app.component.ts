@@ -9,9 +9,14 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   // The styles for this Component
   styleUrls: ['./app.component.scss']
+  /*,
+  // inline template
+  template:`<h1>{{title}}</h1>`
+  */
 })
 export class AppComponent {
   // this variable is linked to the viewport
-  //
+  // local property that is accessible from themes
+  // template html
   title = 'app works';
 }

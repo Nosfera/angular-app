@@ -1,0 +1,22 @@
+<!-- this use fx or flex layout -->
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+<!-- Media angular material with some flex layout applied-->
+<md-list fxFlex>
+  <!-- ngFor for iterate on an array -->
+  <!-- let (for each) from Dishes array -->
+  <md-list-item *ngFor="let dish of dishes">
+    <!-- now 'dish' is the variable that give you access to
+     the properties in the Dishes array -->
+    <img md-list-avatar src={{dish.image}} alt={{dish.name}}>
+    <!-- By the way, using material design "avatar" creates
+    rounded container for images  -->
+    <h1 md-line> {{dish.name}} </h1>
+    <p md-line>
+      <span> {{dish.description}} </span>
+    </p>
+  </md-list-item>
+</md-list>
+
+</div>
