@@ -18,5 +18,5 @@ export class AppComponent {
   // this variable is linked to the viewport
   // local property that is accessible from themes
   // template html
-  title = 'app works';
+  // title = 'app works';
 }

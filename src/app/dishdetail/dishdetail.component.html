@@ -1,3 +1,53 @@
-<p>
-  dishdetail works!
-</p>
+<div class="container" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column"
+    fxLayoutAlign.gt-md="space-around center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+
+  <div fxFlex="40" >
+      <!-- Creation of a Card -->
+      <md-card *ngIf="dish">
+        <!-- has header -->
+        <md-card-header>
+          <md-card-title>
+            <h3>{{dish.name | uppercase}}</h3>
+          </md-card-title>
+        </md-card-header>
+        <!-- Background image alone -->
+        <img md-card-image src={{dish.image}} alt={{dish.name}}>
+        <!-- Content -->
+        <md-card-content>
+          <p md-line>
+            <span> {{dish.description}} </span>
+          </p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button>LIKE</button>
+          <button md-button>SHARE</button>
+        </md-card-actions>
+      </md-card>
+
+  </div>
+
+  <div fxFlex="40" >
+    <h1>Comments</h1>
+      <md-list *ngIf="dish">
+      <!-- ngFor for iterate on an array -->
+      <!-- let (for each) from Dishes array -->
+        <md-list-item class="md-2-line" *ngFor="let comment of dish.comments">
+          <!-- now 'dish' is the variable that give you access to
+           the properties in the Dishes array -->
+
+              <h3 md-line>{{comment.comment}} {{comment.rating }}</h3> 
+                 <p md-line>-- {{comment.author}} at {{comment.date | date}} </p>
+
+
+
+
+
+          <!-- By the way, using material design "avatar" creates
+          rounded container for images  -->
+
+        </md-list-item>
+      </md-list>
+
+  </div>
+
+</div>

@@ -49,6 +49,7 @@ export class MenuComponent implements OnInit {
 /* the declaration of :Dish [] is not required*/
   dishes: Dish[] = DISHES;
   selectedDish = DISHES[0];
+//  dish: Dish[] = COMMENTS;
 
   constructor() { }
 
