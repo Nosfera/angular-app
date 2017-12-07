@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { DishService } from './services/dish.service';
 
 import 'hammerjs';
 
@@ -33,7 +34,7 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component';
     FlexLayoutModule
   ],
   // the providers defines all the services that this module will be using
-  providers: [],
+  providers: [DishService],
   bootstrap: [AppComponent]
 })
 
